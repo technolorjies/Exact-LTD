@@ -37,17 +37,13 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 /*=============== SWIPER PRICES ===============*/
 
 
-
 /*=============== SHOW SCROLL UP ===============*/ 
-
 
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
 
-
 /*=============== DARK LIGHT THEME ===============*/ 
-
 
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
