@@ -581,6 +581,41 @@ img {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (min-width: 100px) {
+
+  .home__data {
+    margin-top: 0;
+  }
+
+  .home__data h1 {
+    font-size: large;
+    margin-bottom: 1rem;
+  }
+
+  .home__title span {
+    font-weight: var(--font-regular);
+  }
+
+  .home__data .auto-type {
+    font-size: 1.3rem;
+  }
+
+  .home__description {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.home__info {
+    display: none;
+}
+
+#intro-text {
+  font-size: 2.5rem;
+}
+
+}
+
+
 @media screen and (min-width: 330px) {
 
   .home__data {
