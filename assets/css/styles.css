@@ -581,6 +581,7 @@ img {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+
 @media screen and (min-width: 100px) {
 
   .home__data {
