@@ -581,7 +581,7 @@ img {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 330px) {
+@media screen and (min-width: 330px) {
 
   .home__data {
     margin-top: 0;
