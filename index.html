@@ -69,14 +69,54 @@
 
       <!--==================== MAIN ====================-->
       <main class="main">
+
+
          <!--==================== HOME ====================-->
          <section class="home section" id="home">
-            
+            <div class="home__container container grid">
+               <div class="home__data scroll-animate from-left">
+                  <h1 class="home__title"><span>We are</span> Exact<span> in</span></h1>
+                  <h1><span class="auto-type"></span></h1>
+                  <p class="home__description">Value is not just found in the idea, but preserved in the precision of its delivery.</p>
+                  <a href="#about" class="button">Get started</a>
+               </div>
+               <div class="home__content grid scroll-animate from-right">
+                  <div class="home__info">
+                     <div>
+                        <div class="card__container" data-tilt>
+                           <article class="card__article">
+                              <img src="assets/img/ipad.png" alt="image" class="card__img">
+
+                              <div class="card__data">
+                                 <span class="card__description">Vancouver Mountains, Canada</span>
+                                 <h2 class="card__title">The Great Path</h2>
+                                 <a href="#" class="card__button">Read More</a>
+                              </div>
+                           </article>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="home__image">
+                     <img src="assets/img/home-img.png" alt="image" class="home__img">
+                  </div>
+               </div>
+            </div>
+                  <div class="intro-section">
+        <p id="intro-text"></p>
+      </div>
          </section>
+
+         <!--==================== INTRO ====================-->
+
+<section class="intro section" id="intro">
+
+</section>
 
          <!--==================== ABOUT US ====================-->
          <section class="about section" id="about">
             
+
+
          </section>
 
          <!--==================== OUR EXPERTISE ====================-->
@@ -119,7 +159,124 @@
       <!--=============== SWIPER JS ===============-->
       <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
+      <!--==========AUTO TYPEWRITER==========-->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+
+      <!--============SCROLLMAGIC============-->
+      <script src='./body/splitting.js'></script>
+      <script src='./body/scroll-out.js'></script>
+      <script src='./body/jquery.min.js'></script>
+      <script src='./body/ScrollMagic.min.js'></script>
+      <script src='./body/debug.addIndicators.min.js'></script>
+      <script src='./body/animation.gsap.min.js'></script>
+      <script src='./body/TweenMax.min.js'></script>
+      <script src="./body/hero-typed-text.js"></script>
+      <script src="./body/tilt.js"></script>
+
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
+      <script>
+         var typed = new Typed(".auto-type", {
+               String: ["We are delivering engineering excellence", "We are delivering engineering excellence", "We"],
+               typeSpeed: 80,
+               backSpeed: 20,
+               loop: true,
+         })
+
+         // ScrollReveal Configuration for scroll-based animations
+         const sr = ScrollReveal({
+            origin: 'bottom',
+            distance: '100px',
+            duration: 800,
+            delay: 0,
+            reset: true,
+            easing: 'ease-out'
+         });
+
+         // Home title - slide in from top
+         sr.reveal('.home__title', {
+            origin: 'top',
+            delay: 0
+         });
+
+         // Home description - slide in from right
+         sr.reveal('.home__description', {
+            origin: 'right',
+            delay: 400
+         });
+
+         // Get started button - slide in from top
+         sr.reveal('.home__data .button', {
+            origin: 'top',
+            delay: 400
+         });
+
+         // Home image - slide in from left
+         sr.reveal('.home__image', {
+            origin: 'left',
+            delay: 400
+         });
+
+         // Card Container - slide in from left
+         sr.reveal('.card__img', {
+            origin: 'bottom',
+            delay: 400
+         });
+
+
+         // Image switcher - switches between home-img.png and home-img1.png every 20 seconds with smooth fade
+         const homeImg = document.querySelector('.home__img');
+         let isImg1 = false; // Track current image state
+
+         // Add CSS transition to image
+         homeImg.style.transition = 'opacity 0.8s ease-in-out';
+
+         function switchImage() {
+            // Fade out
+            homeImg.style.opacity = '0';
+
+            // Change image after fade out
+            setTimeout(() => {
+               if (isImg1) {
+                  homeImg.src = 'assets/img/home-img.png';
+               } else {
+                  homeImg.src = 'assets/img/home-img1.png';
+               }
+               isImg1 = !isImg1; // Toggle state
+
+               // Fade in
+               homeImg.style.opacity = '1';
+            }, 400); // Half of transition time
+         }
+
+         // Switch image every 20 seconds
+         setInterval(switchImage, 20000);
+
+
+         // Intro text animation
+         var myText = "We are Exact Services Limited";
+            let myTextLength = myText.length;
+
+            function typing( displayedLength ) {
+            if( displayedLength <= myTextLength ) {
+               $( "#intro-text" ).text( myText.substring( 0, displayedLength ) );
+               }
+            }
+
+            var controller = new ScrollMagic.Controller();
+            var typewritingOnScroll = new TimelineMax();
+
+            var typewritingScene = new ScrollMagic.Scene({ triggerElement: "#intro-text", duration: 300 })
+               .on('progress',  function () {
+                  let scrollProgress = Math.ceil( typewritingScene.progress() * myTextLength );
+                  typing( scrollProgress );
+               })
+               
+            .setPin('#intro-text')
+            .setTween(typewritingOnScroll)
+            .addTo( controller );           
+      </script>
    </body>
 </html>
