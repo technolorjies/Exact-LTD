@@ -534,7 +534,9 @@ img {
 
 
 .intro-section {
-  height: 100vh;
+  height: auto;
+  margin-bottom: 2rem;
+  padding: 3rem 0;
   font-family: "Mona Sans","Mona Sans Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 #intro-text {
@@ -542,6 +544,142 @@ img {
   color: #bbbbbb;
   text-align: center;
   font-weight: 600;
+}
+
+
+
+
+
+
+.intro,
+.outro {
+    text-align: center;
+    align-content: center;
+}
+
+.sticky {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+}
+
+.card-container {
+    position: relative;
+    width: 75%;
+    display: flex;
+    perspective: 1000px;
+    transform: translateY(40px);
+    will-change: width;
+}
+
+.card {
+    position: relative;
+    flex: 1;
+    aspect-ratio: 5/7;
+    transform-style: preserve-3d;
+    transform-origin: top;
+}
+
+#card-1 {
+    border-radius: 20px 0 0 20px;
+}
+
+#card-3 {
+    border-radius: 0 20px 20px 0;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: inherit;
+    overflow: hidden;
+}
+
+.card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: rotateY(180deg);
+    padding: 2rem;
+    border-radius: 3.59281% / 2.58621%;
+}
+
+.card-back p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: black;
+}
+
+.card-back span {
+    position: absolute;
+    top: 4rem;
+    left: 2rem;
+    opacity: 0.4;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#card-1 .card-back {
+    background: linear-gradient(165.825deg, rgb(255 255 255) 0%, rgb(0 0 0) 100%);
+    color: var(--bg);
+}
+
+#card-2 .card-back {
+    background: linear-gradient(177deg, rgb(1 172 185) -18%, rgb(21 191 156) 31%, rgb(0 36 50) 100%);
+}
+
+#card-3 .card-back {
+    background: linear-gradient(
+        165.825deg,
+        rgb(31, 31, 31) 0%,
+        rgb(22, 22, 22) 100%
+    );
+}
+
+#card-3 .card-back p,
+#card-3 .card-back span {
+    color: #cccccc;
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .intro,
+    .outro {
+        width: 100%;
+    }
+
+    .sticky {
+        height: max-content;
+        padding: 4rem 2rem;
+        flex-direction: column;
+    }
+
+    .card-container {
+        width: 100%;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        border-radius: 20px !important;
+    }
+
+    #card-1,
+    #card-2,
+    #card-3 {
+        transform: none;
+    }
 }
 
 
