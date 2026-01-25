@@ -14,10 +14,10 @@
   --text-color: hsl(0, 0%, 24%);
   --text-color-light: hsl(218, 8%, 54%);
   --white-color: hsl(218, 100%, 98%);
-  --white-color-light: hsl(218, 48%, 80%);
+  --white-color-light: hsl(0deg 0% 100%);
   --dark-color: hsl(254, 98%, 18%);
   --gray-color: hsl(0, 0%, 92%);
-  --body-color: hsl(0, 0%, 100%);
+  --body-color: hsl(240deg 9.09% 95.69%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -236,7 +236,7 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--body-color);
+  background-color: var(--white-color-light);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   z-index: var(--z-fixed);
   transition: background-color .4s, box-shadow .4s;
@@ -645,6 +645,43 @@ img {
 #card-3 .card-back span {
     color: #cccccc;
 }
+
+
+.intro-explain-section {
+    background: rgb(245 245 247);
+}
+
+.intro-explain {
+    align-content: center;
+    text-align: center;
+    align-content: center;
+    margin: 10rem;
+    padding: 0 5rem 0 5rem;
+}
+
+.intro-explain h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.intro-explain p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1000px) {
     h1 {
