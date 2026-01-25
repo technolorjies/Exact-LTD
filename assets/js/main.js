@@ -114,6 +114,88 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+//=============== GSAP SCROLLTRIGGER ANIMATIONS ===============*/
+
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    /* ---========= Lenis Smooth Scrolling ==========--- */
+
+    const lenis = new Lenis();
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+    });
+    gsap.ticker.lagSmoothing(0);
+
+    /* ---========= Variables & State ==========--- */
+
+    const cardContainer = document.querySelector('.card-container');
+    const cards = document.querySelectorAll('.card');
+
+    let isGapAnimationComplete = false;
+    let isFlipAnimationComplete = false;
+
+    /* ---========= ScrollTrigger Animations Timeline ==========--- */
+    const gapTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#sticky",
+            start: "top top",
+            end: "top top+=500",
+            scrub: 1,
+            pin: true,
+            markers: false
+        }
+    });
+    
+    gapTl
+        .to(cardContainer, { gap: 30, duration: 1, ease: "power3.out" }, 0)
+        .to("#card-1", { x: -30, duration: 1, ease: "power3.out" }, 0)
+        .to("#card-3", { x: 30, duration: 1, ease: "power3.out" }, 0)
+        .to(cards, { borderRadius: 20, duration: 1, ease: "power3.out" }, 0);
+
+    /* ---========= Flip Animation Timeline ==========--- */
+
+    const flipTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#sticky",
+            start: "center top+=300",
+            end: "center top+=1000",
+            scrub: 3,
+            pin: true,
+            markers: false
+        }
+    });
+    
+    flipTl
+        .to(
+            ".card",
+            { 
+                rotationY: 180,
+                duration: 1, 
+                ease: "power3.inOut",
+                stagger: 0.1,
+                transformOrigin: "center center",
+            },
+            0
+        )
+        .to(
+            ["#card-1", "#card-3"],
+            {
+                y: 30,
+                rotationZ: (i) => (i === 0 ? -15 : 15),
+                duration: 1,
+                ease: "power3.inOut",
+            },
+            0
+        );
+});
+
+
+
+
+
 /*=============== SWIPER PRICES ===============*/
 
 
@@ -127,4 +209,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
-
