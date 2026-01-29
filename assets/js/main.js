@@ -150,6 +150,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+
 /*=============== ABOUT & OTHER SECTIONS - SCROLL REVEAL ===============*/
 /**
  * Scroll Reveal Animation Function
@@ -208,3 +209,87 @@ document.querySelectorAll('.read-more, .btn-main').forEach(button => {
         // e.preventDefault();
     });
 });
+
+const items = document.querySelectorAll('.item');
+const images = document.querySelectorAll('.stage-frame img');
+const para__card = document.getElementById('para__card');
+const overlay = document.getElementById('overlay');
+const overlayTag = document.getElementById('overlay-tag');
+const overlayTitle = document.getElementById('overlay-title');
+const overlayDesc = document.getElementById('overlay-desc');
+
+// Accordion & Content Swapping
+items.forEach(item => {
+  item.addEventListener('click', () => {
+    // Check if item is already active - if so, open the next one
+    if (item.classList.contains('active')) {
+      // Find current active item index
+      const currentIndex = Array.from(items).indexOf(item);
+      // Calculate next index (wrap around to 0 if at the end)
+      const nextIndex = (currentIndex + 1) % items.length;
+      const nextItem = items[nextIndex];
+      
+      // Remove active from all
+      items.forEach(i => i.classList.remove('active'));
+      images.forEach(img => img.classList.remove('active'));
+      overlay.classList.remove('active-overlay');
+      
+      // Add active to next item
+      nextItem.classList.add('active');
+      const targetImg = document.getElementById(nextItem.dataset.img);
+      if (targetImg) targetImg.classList.add('active');
+
+      setTimeout(() => {
+          overlayTag.innerText = nextItem.dataset.tag;
+          overlayTitle.innerText = nextItem.dataset.title;
+          overlayDesc.innerText = nextItem.dataset.desc;
+          overlay.classList.add('active-overlay');
+          overlay.style.transform = 'translateZ(400px) translateY(0)';
+      }, 150);
+      return;
+    }
+
+    // If not active, open this item
+    items.forEach(i => i.classList.remove('active'));
+    images.forEach(img => img.classList.remove('active'));
+    overlay.classList.remove('active-overlay');
+
+    item.classList.add('active');
+    const targetImg = document.getElementById(item.dataset.img);
+    if (targetImg) targetImg.classList.add('active');
+
+    setTimeout(() => {
+        overlayTag.innerText = item.dataset.tag;
+        overlayTitle.innerText = item.dataset.title;
+        overlayDesc.innerText = item.dataset.desc;
+        overlay.classList.add('active-overlay');
+        // 3D slide-out effect - overlay slides out toward viewer
+        overlay.style.transform = 'translateZ(400px) translateY(0)';
+    }, 150);
+  });
+});
+
+// Reset overlay 3D position on mouse leave from accordion
+document.querySelector('.content').addEventListener('mouseleave', () => {
+    overlay.style.transform = 'translateZ(180px)';
+});
+
+// Dynamic 3D Physics (Tilt + Shadow)
+window.addEventListener('mousemove', (e) => {
+    let x = (window.innerWidth / 2 - e.pageX) / 100; 
+    
+    // Tilt the para__card left/right only (remove rotateX for up/down tilt)
+    para__card.style.transform = `rotateY(${x}deg)`;
+    
+    // Move the shadow in the opposite direction
+    // Logic: If the para__card tilts left, the shadow moves right.
+    let shadowX = x * -2; // Amplified shadow movement
+    overlay.style.boxShadow = `${shadowX}px 0 80px rgba(0,0,0,0.8)`;
+});
+
+window.addEventListener('mouseleave', () => {
+    para__card.style.transform = `rotateY(0deg)`;
+    overlay.style.boxShadow = `0 40px 80px rgba(0,0,0,0.7)`;
+});
+
+overlay.classList.add('active-overlay');
