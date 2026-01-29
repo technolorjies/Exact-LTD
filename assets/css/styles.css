@@ -326,6 +326,7 @@ img {
   gap: 1rem;
 }
 
+
 /* Navigation menu for mobile devices - hidden by default */
 @media screen and (max-width: 1150px) {
   .nav__menu {
@@ -412,6 +413,7 @@ img {
 
 .home {
   background: linear-gradient(#ffffff, #1a0b45c9, #000000);
+  padding: 0rem 2rem 1rem 2rem !important;
 }
 
 .home__container {
@@ -852,7 +854,7 @@ img {
     margin-left: 5%;
     display: flex;
     justify-content: center;
-    padding: 5rem;
+    padding: 5rem 5rem 10rem 5rem;
     gap: 5rem;
 }
 
@@ -898,7 +900,7 @@ img {
     #f6f8ff;
     max-width: 100%;
     display: flex;
-    padding: 5rem;
+    padding: 10rem 5rem 10rem 5rem;
     gap: 40px;
     align-items: center;
 }
@@ -1028,6 +1030,262 @@ img {
 
 /*=============== OUR EXPERTISE ===============*/
 /* Placeholder for expertise section styles */
+
+/* --- 3D Stage & Depth --- */
+.expert-section {
+  padding: 10rem 2rem 1rem 2rem !important;
+  background-color: #0d0d12;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(260,31%,25%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 100%, hsla(240,10%,10%,1) 0, transparent 50%);
+  background-attachment: fixed;
+}
+
+.expert-badge {
+    max-width: 40%;
+    margin-left: 30%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border: 1px solid #cccccc2e;
+    padding: 5px 15px;
+    border-radius: 100px;
+    font-size: 5rem;
+    color: #cccccc2e;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
+}
+
+.stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  perspective: 2000px;
+}
+
+.stage-frame {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 90%;
+  aspect-ratio: 1 / 1;
+  border-radius: 40px;
+  background: #111;
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.1, 0.5, 0.2, 1);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.stage-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
+  opacity: 0;
+  scale: 1.1;
+  transition: opacity 0.8s var(--ease), scale 0.8s var(--ease);
+}
+
+.stage-frame img.active {
+  opacity: 0.55;
+  scale: 1;
+}
+
+/* Glass Overlay - Extreme Projection */
+.image-overlay {
+  position: absolute;
+  width: 28rem;
+  bottom: 0;
+  left: 100px;
+  right: 100px;
+  padding: 2rem;
+  border-radius: 32px;
+  background: var(--glass);
+  backdrop-filter: blur(35px) saturate(200%);
+  -webkit-backdrop-filter: blur(35px) saturate(200%);
+  border: 1px solid var(--glass-border);
+  z-index: 10;
+  pointer-events: none;
+  transform: translateZ(180px); /* Pushed even further */
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* Initial static shadow */
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transition: box-shadow 0.1s ease-out, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.overlay-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s var(--ease);
+}
+
+.active-overlay .overlay-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay-content span {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent);
+  margin-bottom: 12px;
+  font-weight: 800;
+}
+
+.overlay-content h3 {
+  font-size: 30px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.overlay-content p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+}
+
+/* --- Accordion --- */
+
+.item {
+  padding: 1rem 0rem;
+  border-bottom: 1px solid #cccccc4f;
+  cursor: pointer;
+  max-height: 60px;
+  overflow: hidden;
+  transition: max-height 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.item.active {
+  max-height: 500px;
+}
+
+.item h2
+ {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: all 1s var(--ease);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-arrow {
+    font-size: 1.2rem;
+    transition: transform 0.5s var(--ease);
+}
+
+.item.active .item-arrow {
+    transform: rotate(180deg);
+}
+
+.item.active h2 { color: #00b0ab; }
+
+.item .description-container {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+}
+
+.item.active .description-container { 
+  grid-template-rows: 1fr;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  line-height: 1.5px;
+}
+
+.item .description-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.item .description-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.item .description-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 176, 171, 0.3);
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.item .description-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 176, 171, 0.6);
+}
+
+.item ul {
+  list-style: disc;        /* Show bullet points */
+  margin-left: 1.5rem;     /* Indent list items */
+  text-align: left;        /* Left-align list items */
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+}
+
+.item li {
+  margin-bottom: 0.5rem;   /* Space between list items */
+  color: #ccccccc2;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+}
+
+.item.active ul,
+.item.active li {
+  opacity: 1;
+}
+
+.item p {
+  overflow: hidden;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #ccccccc2;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+}
+
+.item.active p {
+  opacity: 1;
+  padding-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .wrapper { grid-template-columns: 1fr; }
+  .stage { position: relative; height: auto; perspective: none; }
+  .image-overlay { 
+    transform: none !important; 
+    position: relative; 
+    margin-top: -100px; 
+    left: 20px; 
+    right: 20px; 
+    bottom: 20px; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5) !important;
+  }
+}
+
+
+
+
 
 
 /*=============== PROJECTS ===============*/
@@ -1729,7 +1987,7 @@ img {
     margin-inline: auto;
   }
   .section {
-    padding-block: 0rem 2rem;
+    padding: 10rem 2rem 10rem 2rem;
   }
   .section__title {
     margin-bottom: .5rem;
