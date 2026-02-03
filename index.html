@@ -1,767 +1,331 @@
+
 <!DOCTYPE html>
-<!-- ===== Main HTML Document for Exact Services Limited Website ===== -->
-<!-- This website showcases Exact Services Limited's engineering expertise and services -->
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <!-- Ensures proper character encoding for special characters -->
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- Makes the website responsive on mobile devices -->
-
-   <!--=============== FAVICON ===============-->
-   <!-- Browser tab icon - displays company logo in browser tab -->
-   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-
-   <!--=============== REMIXICONS ===============-->
-   <!-- Icon library for navigation and interactive elements -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-
-   <!--=============== CSS ===============-->
-   <!-- Main stylesheet containing all styles for layout, colors, and animations -->
-   <link rel="stylesheet" href="assets/css/styles.css">
-
-   <!--=============== SWIPER CSS ===============-->
-   <!-- Carousel/slider library CSS for rotating content (if needed) -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
-
-   <title>Exact Services Limited | Your Engineering Partner</title>
-</head>
-   <body>
-      <!--==================== HEADER SECTION ====================-->
-      <!-- Fixed navigation bar at the top with logo, menu, theme switcher -->
-      <header class="header" id="header">
-         <nav class="nav container">
-            <!-- Logo Section -->
-            <a href="#" class="nav__logo"><img src="./assets/img/logo2.png"></a>  
-            
-            <!-- Navigation Menu List -->
-            <div class="nav__menu" id="nav-menu">
-               <ul class="nav__list">
-                  <!-- Navigation links - each links to a page section -->
-                  <li class="nav__item">
-                     <a href="#home" class="nav__link active-link">Home</a>
-                  </li>
-                  <li class="nav__item">
-                     <a href="#about" class="nav__link">About Us</a>
-                  </li>
-                  <li class="nav__item">
-                     <a href="#expertise" class="nav__link">Our Expertise</a>
-                  </li>
-                  <li class="nav__item">
-                     <a href="#projects" class="nav__link">Projects</a>
-                  </li>
-                  <li class="nav__item">
-                     <a href="#sustainability" class="nav__link">Sustainability</a>
-                  </li>
-                  <li class="nav__item">
-                     <a href="#blog" class="nav__link">Blog</a>
-                  </li>
-                  <li class="nav__item">
-                     <a href="#contact" class="nav__link">Contact Us</a>
-                  </li>
-               </ul>
-
-               <!-- Mobile Menu Close Button -->
-               <div class="nav__close" id="nav-close">
-                  <i class="ri-close-line"></i>
-               </div>
-            </div>
-
-            <!-- Theme Button (Dark/Light mode toggle) -->
-            <div class="nav__buttons">
-               <i class="ri-moon-fill nav__theme" id="theme-button"></i>
-            </div>
-
-            <!-- Mobile Menu Toggle Button -->
-            <div class="nav__toggle" id="nav-toggle">
-               <i class="ri-menu-line"></i>
-            </div>
-
-         </nav>
-      </header>
-
-      <!--==================== MAIN CONTENT AREA ====================-->
-      <!-- Container for all main page sections -->
-      <main class="main">
-
-
-         <!--==================== HOME ====================-->
-         <section class="home section" id="home">
-            <div class="home__container container grid">
-               <div class="home__data">
-                  <h1 class="home__title"><span>We are</span> Exact<span> in</span></h1>
-                  <h1><span class="auto-type"></span></h1>
-                  <p class="home__description">From concept through to completion, we deliver precision, reliabilty, and performance you trust.</p>
-                  <a href="#about" class="button">Get started</a>
-               </div>
-               <div class="home__content grid">
-                  <div class="home__info">
-                     <div>
-                        <div class="card__container" data-tilt>
-                           <article class="card__article">
-                              <img src="assets/img/ipad.png" alt="image" class="card__img">
-
-                              <div class="card__data">
-                                 <span class="card__description">Vancouver Mountains, Canada</span>
-                                 <h2 class="card__title">The Great Path</h2>
-                                 <a href="#" class="card__button">Read More</a>
-                              </div>
-                           </article>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="home__image">
-                     <img src="assets/img/home-img.png" alt="image" class="home__img">
-                  </div>
-               </div>
-            </div>
-            <div class="intro-section">
-               <p id="intro-text"></p>
-            </div>                  
-         </section>
-
-
-         <!--==================== INTRO ====================-->
-
-         <section class="sticky" id="sticky">
-
-               <div class="card-container">
-                     <div class="card" id="card-1">
-                        <div class="card-front">
-                           <img src="./assets/img/image_part_001.jpg" alt="">
-                        </div>
-                        <div class="card-back">
-                           <span>CLIENT FOCUS</span>
-                           <p>Our business is about making our clients' businesses better. We have built a responsive business culture that focuses on our client’s needs and provides customised solutions with certainty of delivery.</p>
-                        </div>
-                     </div>
-
-                     
-                     <div class="card" id="card-2">
-                        <div class="card-front">
-                           <img src="./assets/img/image_part_002.jpg" alt="">
-                        </div>
-                        <div class="card-back">
-                           <span>COLLABORATION</span>
-                           <p>Through strategic collaboration, we aim to maximize the potential of our combined capabilities and geographical reach to enhance the delivery of Exact Services and provide exceptional solutions</p>
-                        </div>
-                     </div>
-
-                     
-                     <div class="card" id="card-3">
-                        <div class="card-front">
-                           <img src="./assets/img/image_part_003.jpg" alt="">
-                        </div>
-                        <div class="card-back">
-                           <span>VALUE DRIVEN</span>
-                           <p>At Exact Services Limited, we deliver a consistent, quality engineering services, sharing knowledge across borders and capturing valuable perspective. We strive to challenge the status quo.</p>
-                        </div>
-                     </div>
-                  </div>
-            </section>
-
-            <section class="intro-explain-section">
-               <div class="intro-explain">
-                  <h1 class=" reveal-r">We inspire and help our customers</h1>
-                  <p class=" reveal-l">Our depth of expertise ensures our ability to deliver specialist knowledge and capability to a diverse range of clients while offering exceptional, result and relationship-driven service every time.</p>
-                  <a href="#about" class="button">Get started</a>
-               </div>
-            </section>
-
-         <!--==================== ABOUT US ====================-->
-                  <!--==================== ABOUT MODAL ====================-->
-         <div class="about-modal" id="aboutModal">
-            <div class="modal-overlay"></div>
-            <div class="modal-content">
-               <button class="modal-close" id="closeAboutModal">
-                  <i class="ri-close-line"></i>
-               </button>
-               <div class="modal-body">
-                  <div class="modal-column">
-                     <h2>About<br>Exact Services LTD</h2>
-                     <p>EXACT SERVICES (ESL) is a private limited liability company incorporated with Corporate Affairs Commission. ESL is one of the fast upcoming and integrated engineering, procurement, construction, maintenance, and oil and gas services company. We have the capability of executing all engineering service works, covering engineering, procurement, construction, and commissioning to mention few.</p>
-
-                     <p>We have participated in the execution of several engineering projects with major federal government agencies in Nigeria.ESL is focused on quality, cost-effective, innovative and cutting-edge solutions designed to meet the present day challenges of the Oil and Gas industry and other industrial markets in Nigeria.</p>
-
-                     <p>With a well grounded team of experience Engineers and other technical staff involved in oil and gas services, our clients are assured to expect the level of expertise they required.</p>
-                  </div>
-                  
-                  <div class="modal-column">
-                     <p>Our experience in the field of engineering maintenance as well as Oil and Gas industry enhance our performance and ability to meet our client expectation on time.</p>
-                     <img src="./assets/img/ESL.png">
-                  </div>
-               </div>
-            </div>
-         </div>
-      </main>
-
-         <section class="about services-section" id="about">
-            <div class="about__container-main">
-               <div class="img-side-main reveal-l">
-                  <div class="about__img">
-                     <img src="./assets/img/about.png" alt="">
-                  </div>
-               </div>
-
-               <div class="content-side-main">
-                  <div class="reveal-r"><span class="badge">About Us</span></div>
-                  <h1 class="reveal-l">Industry Expertise That Empowers</h1>
-                  <p class="reveal-r">Exact Services is a multidisciplinary engineering company registered in Nigeria <strong>(RC 366085)</strong>. We deliver flexible, innovative, and cost-effective engineering solutions tailored to client needs. Driven by quality, safety, and customer satisfaction, our experienced and well-trained team applies disciplined processes and technical expertise to consistently deliver value and support our clients’ success.</p>
-                  <div class=" reveal-l"><a href="#" class="btn-main reveal-d" id="about-read-more">Read More</a></div>
-                  
-               </div>
-         </div>
-         </section>
-
-
-         <section class="about services-section" id="about">
-            <div class="about__container">
-            <div class="content-side">
-                <div class="reveal-d"><span class="badge">Strategic Pillars</span></div>
-                <h1 class="reveal-l">We are Value-Driven & Mission-Led</h1>
-                <p class="reveal-r">At our core, we are a values-driven organization dedicated to bridging the infrastructural gap within the oil and gas industry. By integrating state-of-the-art technological equipment with expert services and support, we empower our clients to achieve sustainable growth and operational excellence.</p>
-                <div class="reveal-l"><a href="#about" class="btn-main">Read More</a></div>
-            </div>
-
-            <div class="cards-side">
-                <div class="about__card reveal-t">
-                    <h1>Our Values</h1>
-                    <ul>
-                        <li>Excellence</li>
-                        <li>Professionalism</li>
-                        <li>Innovation</li>
-                        <li>Customer focus</li>
-                        <li>Integrity & Teamwork</li>
-                    </ul>
-                </div>
-                <div class="about__card reveal-r">
-                    <h1>Our Vision</h1>
-                     <p>To bridge the infrastructure gap in the oil and gas industry by providing state-of-the-art technological equipment, services, and support.</p>
-                </div>
-                <div class="about__card reveal-l">
-                    <h1>Our Mission</h1>
-                     <p>To provide our clients with innovative and cost-effective solutions, through continuous development of a focused and dedicated workforce.</p>
-                </div>
-                <div class="about__card reveal-d">
-                    <h1>Experience Gallery</h1>
-                    <ul>
-                        <li>100% Indigenous Ownership</li>
-                        <li>Proven Industrial Impact</li>
-                        <li>Uncompromising Quality</li>
-                     </ul>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.1.0/swiper-bundle.min.css" />
+    <title>Exact Services Limited | Your Engineering Partner</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo"><img src="./assets/img/logo2.png"></a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About Us</a>
+            </li>
+            <li class="nav__item">
+              <a href="#expertise" class="nav__link">Our Expertise</a>
+            </li>
+            <li class="nav__item">
+              <a href="#projects" class="nav__link">Projects</a>
+            </li>
+            <li class="nav__item">
+              <a href="#sustainability" class="nav__link">Sustainability</a>
+            </li>
+            <li class="nav__item">
+              <a href="#blog" class="nav__link">Blog</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact Us</a>
+            </li>
+          </ul>
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
         </div>
-         </section>
-
-
-         <!--==================== OUR EXPERTISE SECTION ====================-->
-         <!-- Section for showcasing company expertise and services -->
-         <section class="expertise expert-section" id="expertise">
-            <div class="expert-badge reveal-r"><span>Our Services</span></div>
-            <div class="wrapper reveal-l">
-               <div class="stage">
-                  <div class="stage-frame" id="para__card">
-                     <div class="image-overlay" id="overlay">
-                     <div class="overlay-content">
-                           <span id="overlay-tag">Test Tag</span>
-                           <h3 id="overlay-title">Test Title</h3>
-                           <p id="overlay-desc">Test Description</p>
-                     </div>
-                     </div>
-
-                     <img src="./assets/img/white.jpg" class="active" id="img1">
-                     <img src="./assets/img/black.jpg" id="img2">
-                     <img src="./assets/img/white.jpg" id="img3">
-                     <img src="./assets/img/black.jpg" id="img4">
-                     <img src="./assets/img/white.jpg" id="img5">
-                     <img src="./assets/img/black.jpg" id="img6">
-                  </div>
-               </div>
-
-               <div class="content reveal-r">
-                  <div class="item active" 
-                        data-img="img1" 
-                        data-tag="Test Tag" 
-                        data-title="Test Title" 
-                        data-desc="Test Description">
-                     <h2><i class="ri-arrow-down-s-line item-arrow"></i>Power/Industrial Engineering</h2>
-                     <div class="description-container">
-                        <p>Our company, EXACT SERVICES, has the required personnel and capability to carry out maintenance on a regular basis in the following areas as they relate to the National Electric Power Authority (NEPA).</p>
-                        <ul>
-                           <li>Transformer Maintenance</li>
-                           <li>RMU Maintenance</li>
-                           <li>Panel Maintenance</li>
-                           <li>System Studies</li>
-                           <li>Overhead Lines</li>
-                        </ul>
-                     </div>
-                  </div>
-
-                  <div class="item" 
-                        data-img="img2" 
-                        data-tag="Test Tag" 
-                        data-title="Test Title" 
-                        data-desc="test description">
-                     <h2><i class="ri-arrow-down-s-line item-arrow"></i>Consultancy in Engineering Services</h2>
-                     
-                     <div class="description-container">
-                        <p>EXACT SERVICES LIMITED is led by chartered specialists across key engineering disciplines, delivering integrated, strategic, and customer-focused project management solutions.</p>
-
-                        <br>
-
-                        <p>Our consultancy capabilities comprise:</p>
-                        <ul>
-                           <li>Electrical Engineering</li>
-                           <li>Information Communication Technology Services</li>
-                        </ul>
-
-                        <br>
-
-                        <p>Benefits to our Customers:</p>
-                        <ul>
-                           <li>Reliable and quality communications</li>
-                           <li>Cost effective service</li>
-                           <li>Expansion of market reach and revenuegrowth</li>
-                           <li>Effectiveness and productivity enhancement</li>
-                           <li>Social and economic development</li>
-                           <li>Reliable and Quality Services</li>
-                        </ul>
-                     </div>
-                  </div>
-
-                  <div class="item" 
-                        data-img="img3" 
-                        data-tag="Test Tag" 
-                        data-title="Test Title" 
-                        data-desc="test description">
-                     <h2><i class="ri-arrow-down-s-line item-arrow"></i>Supply and Maintenance of Engineering Systems</h2><br>
-                     <div class="description-container">
-                        
-                     <div class="description-container">
-                        <ul>
-                           <li>
-                              Air-Conditioning system: We supply, install, and maintain various types and brands of air conditioners, dealing in chiller systems, cold rooms, central units, split units, and refrigerators.
-                           </li>
-                           <li>
-                              Generators: We supply, install and maintain generators of various capacities and phases.
-                           </li>
-                           <li>
-                              Supply of Rural Electrification materials such as Transformers, Electric Poles, Feeder pillars, poles Dressing materials, Cables and Line conductors.</li>
-                        </ul>
-                     </div>
-                     </div>
-                  </div>
-
-                  <div class="item" 
-                        data-img="img4" 
-                        data-tag="Test Tag" 
-                        data-title="Test Title" 
-                        data-desc="test description">
-                     <h2><i class="ri-arrow-down-s-line item-arrow"></i>Construction Services</h2>
-                     <div class="description-container">
-                        <ul>
-                           <li>
-                              Remodeling, reconstruction, and finishing of existing structures.
-                           </li>
-                           <li>
-                              Constructing structures designed by otherfirms.
-                           </li>
-                           <li>
-                              Extensive landscaping and erosion control. 
-                           </li>
-                           <li>
-                              Maintenance of existing roads.
-                           </li>
-                           <li>
-                              ESupply of specific construction materials, such as earth equipment, laterite chippings, iron rods, and cement as the client may from time to time require. 
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-
-                  <div class="item" 
-                        data-img="img5" 
-                        data-tag="Test Tag" 
-                        data-title="Test Title" 
-                        data-desc="test description">
-                     <h2><i class="ri-arrow-down-s-line item-arrow"></i>Marine Engineering</h2>
-                     <div class="description-container">
-                        <ul>
-                           <li>
-                              Supply, installation and maintenance of Inmarsats, radars, echo sounders, Tugboat services, marine water supplies/on and off shores, boilers and vessels, Rehabilitation of dredger jetty
-                           </li>
-                           <li>
-                              Tenders documentation, appraisal and evaluation
-                           </li>
-                           <li>
-                              Project supervision, management and control (Feed-back mechanism)
-                           </li>
-                           <li>
-                              Project site consultancy
-                           </li>
-                           <li>
-                              Site determination (Suitability analysis)
-                           </li>
-                           <li>
-                              Site Preparation
-                           </li>
-                           <li>
-                              Site design.
-                           </li>
-                           <li>
-                              Feasibility studies, project research and development
-                           </li>
-                           <li>
-                              Feasibility studies and report writing 
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-
-                  <div class="item" 
-                        data-img="img6" 
-                        data-tag="Test Tag" 
-                        data-title="Test Title" 
-                        data-desc="test description">
-                     <h2><i class="ri-arrow-down-s-line item-arrow"></i>Weatherproofing</h2>
-                     <div class="description-container">
-                        <ul>
-                           <li>
-                              Waterproofing (felting): Protection of all kinds of roofing materials (concrete or Asbestos) against leakages (Roof management).
-                           </li>
-                           <li>
-                              Rust proofing: Protection of metal tanks, pipes, ships or merchant vessels and all metal related structures against corrosion. 
-                           </li>
-                           <li>
-                              Damp proofing: We employ high quality membranes in the construction of structural foundations to prevent rising damp in buildings.</li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>       
-         </section>
-
-         <!--==================== PROJECTS SHOWCASE SECTION ====================-->
-         <!-- Gallery or list of completed projects -->
-         <section class="projects section" id="projects">
-            
-         </section>
-
-         <!--==================== SUSTAINABILITY SECTION ====================-->
-         <!-- Information about company's sustainability initiatives -->
-         <section class="sustainability section" id="sustainability">
-            
-         </section>
-
-         <!--==================== BLOG SECTION ====================-->
-         <!-- Latest blog posts and articles -->
-         <section class="blog section" id="blog">
-            
-         </section>
-
-         <!--==================== CONTACT US SECTION ====================-->
-         <!-- Contact form and information -->
-         <section class="contact section" id="contact">
-            
-         </section>
-
-
-      <!--==================== FOOTER ====================-->
-      <!-- Footer with links and company information -->
-      <footer class="footer">
-         
-      </footer>
-
-      <!--========== SCROLL UP BUTTON ==========-->
-      <!-- Button to quickly return to top of page (implementation optional) -->
-      
-
-      <!--=============== EXTERNAL SCRIPT LIBRARIES ===============-->
-      
-      <!--=============== ScrollReveal JS ===============-->
-      <!-- Library for triggering animations on scroll - detects when elements enter viewport -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
-      
-      <!--=============== Swiper JS ===============-->
-      <!-- Carousel/slider library for rotating content (if needed in future) -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
-      <!--=============== Auto Typewriter Effect ===============-->
-      <!-- jQuery - utility library for DOM manipulation and effects -->
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <!-- Typed.js - creates typing/text animation effects -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-
-
-      <!--=============== Scroll Animation Libraries ===============-->
-      <!-- GSAP ScrollTrigger - advanced scroll-based animations -->
-      <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-      <!-- GSAP Core - animation engine library -->
-      <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-      <!-- Lenis - smooth scrolling library -->
-      <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js"></script>
-
-
-
-      <!--=============== ScrollMagic Libraries ===============-->
-      <!-- Advanced scroll-based animation framework -->
-      <script src='./body/splitting.js'></script>
-      <!-- Scroll detection and animation -->
-      <script src='./body/scroll-out.js'></script>
-      <script src='./body/jquery.min.js'></script>
-      <!-- ScrollMagic controller - manages scroll-based triggers -->
-      <script src='./body/ScrollMagic.min.js'></script>
-      <!-- Debug indicators for ScrollMagic (useful during development) -->
-      <script src='./body/debug.addIndicators.min.js'></script>
-      <!-- GSAP animation plugin for ScrollMagic -->
-      <script src='./body/animation.gsap.min.js'></script>
-      <!-- TweenMax - simplified GSAP animation library -->
-      <script src='./body/TweenMax.min.js'></script>
-      <!-- Typewriter hero text animation -->
-      <script src="./body/hero-typed-text.js"></script>
-      <!-- 3D tilt effect for cards -->
-      <script src="./body/tilt.js"></script>
-
-      <!--=============== MAIN JAVASCRIPT FILE ===============-->
-      <!-- Core JavaScript functionality for the site -->
-      <script src="assets/js/main.js"></script>
-      
-      <!--=============== INLINE SCRIPTS ===============-->
-      <script>
-         /**
-          * Typed.js Configuration
-          * Creates typewriter effect for dynamic text in hero section
-          */
-         var typed = new Typed(".auto-type", {
-               // Array of strings to cycle through
-               String: ["We are delivering engineering excellence", "We are delivering engineering excellence", "We"],
-               typeSpeed: 80,      // Speed of typing in milliseconds
-               backSpeed: 20,      // Speed of backspacing
-               loop: true,         // Loop through all strings
-         })
-
-         /**
-          * ScrollReveal Configuration
-          * Initializes scroll reveal animations with default settings
-          */
-         const sr = ScrollReveal({
-            origin: 'bottom',      // Elements come in from bottom
-            distance: '100px',     // Travel distance
-            duration: 800,         // Animation duration in ms
-            delay: 0,              // Delay before animation starts
-            reset: true,           // Re-trigger when scrolling back up
-            easing: 'ease-out'     // Animation easing function
-         });
-
-         /**
-          * Home Section Scroll Reveals
-          * Staggered animations for hero section elements
-          */
-
-         // Home title - slide in from top
-         sr.reveal('.home__title', {
-            origin: 'top',
-            delay: 0
-         });
-
-         // Home description - slide in from right with delay
-         sr.reveal('.home__description', {
-            origin: 'right',
-            delay: 400    // 400ms delay for staggered effect
-         });
-
-         // Get started button - slide in from top with delay
-         sr.reveal('.home__data .button', {
-            origin: 'top',
-            delay: 400    // 400ms delay for staggered effect
-         });
-
-         // Home image - slide in from left with delay
-         sr.reveal('.home__image', {
-            origin: 'left',
-            delay: 400    // 400ms delay for staggered effect
-         });
-
-         // Card Container - slide in from left
-         sr.reveal('.card__img', {
-            origin: 'bottom',
-            delay: 400
-         });
-
-
-         /**
-          * Home Image Auto-Switcher
-          * Alternates between two hero images every 20 seconds with smooth fade effect
-          * Creates dynamic hero section presentation without manual intervention
-          */
-         const homeImg = document.querySelector('.home__img');
-         let isImg1 = false; // Track which image is currently displayed
-
-         // Add CSS transition for smooth fade animation
-         homeImg.style.transition = 'opacity 0.8s ease-in-out';
-
-         /**
-          * Switch image function
-          * Fades out current image, changes src attribute, then fades in new image
-          */
-         function switchImage() {
-            // Fade out current image
-            homeImg.style.opacity = '0';
-
-            // Change to new image after fade out completes
-            setTimeout(() => {
-               // Toggle between the two hero images
-               if (isImg1) {
-                  homeImg.src = 'assets/img/home-img.png';  // Primary image
-               } else {
-                  homeImg.src = 'assets/img/home-img1.png'; // Alternate image
-               }
-               isImg1 = !isImg1; // Toggle state for next cycle
-
-               // Fade in the new image
-               homeImg.style.opacity = '1';
-            }, 400); // 400ms = half of 0.8s transition time
-         }
-
-         // Automatically switch images every 20 seconds (20000 milliseconds)
-         setInterval(switchImage, 20000);
-
-
-         /**
-          * Intro Text Scroll Animation
-          * Progressively reveals text as user scrolls using ScrollMagic
-          * Creates typewriter effect tied to scroll progress
-          */
-         var myText = "We are Exact Services Limited";
-         let myTextLength = myText.length;
-
-         /**
-          * Display text character by character
-          * Called on each scroll event to update displayed text length
-          */
-         function typing(displayedLength) {
-            // Only update if within text length bounds
-            if(displayedLength <= myTextLength) {
-               // Display substring from 0 to displayedLength
-               $("#intro-text").text(myText.substring(0, displayedLength));
-            }
-         }
-
-         // Initialize ScrollMagic controller for scroll-based animation management
-         var controller = new ScrollMagic.Controller();
-         // Create empty timeline for animation sequencing
-         var typewritingOnScroll = new TimelineMax();
-
-         // Create scene that triggers on intro-text element with 300px duration
-         var typewritingScene = new ScrollMagic.Scene({
-            triggerElement: "#intro-text",
-            duration: 300  // Animation duration in pixels scrolled
-         })
-            .on('progress', function() {
-               // Calculate how much of the text should be shown based on scroll progress (0 to 1)
-               let scrollProgress = Math.ceil(typewritingScene.progress() * myTextLength);
-               typing(scrollProgress);  // Update displayed text
-            })
-            .setPin('#intro-text')     // Pin element during animation
-            .setTween(typewritingOnScroll)  // Add animation tween
-            .addTo(controller);        // Add to controller
-      </script>
-
-      <script>
-         /**
-          * About Modal Functionality
-          * Handles opening, closing, and scrolling behavior of about modal
-          */
-         const aboutModal = document.getElementById('aboutModal');
-         const aboutReadMoreBtn = document.getElementById('about-read-more');
-         const closeAboutModalBtn = document.getElementById('closeAboutModal');
-         const modalOverlay = document.querySelector('.modal-overlay');
-         const modalContent = document.querySelector('.modal-content');
-
-         /**
-          * Open modal - Click handler for About button
-          * Shows modal, disables background scrolling, and focuses on close button
-          */
-         aboutReadMoreBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            // Add active class to show modal (CSS handles visibility)
-            aboutModal.classList.add('active');
-            
-            // Disable scrolling on background elements
-            document.body.style.overflow = 'hidden';
-            document.documentElement.style.overflow = 'hidden';
-            
-            // Lock viewport height to prevent scroll movement
-            document.body.style.height = '100vh';
-            document.documentElement.style.height = '100vh';
-            
-            // Stop Lenis smooth scrolling if it's active
-            if (window.lenis) {
-               window.lenis.stop();
-            }
-            
-            // Set focus to close button for accessibility
-            closeAboutModalBtn.focus();
-         });
-
-         /**
-          * Close modal function
-          * Re-enables scrolling, restarts Lenis, hides modal, and returns focus
-          */
-         function closeModal() {
-            // Remove active class to hide modal
-            aboutModal.classList.remove('active');
-            
-            // Re-enable background scrolling
-            document.body.style.overflow = 'auto';
-            document.documentElement.style.overflow = 'auto';
-            
-            // Reset viewport height restrictions
-            document.body.style.height = 'auto';
-            document.documentElement.style.height = 'auto';
-            
-            // Restart Lenis smooth scrolling if it exists
-            if (window.lenis) {
-               window.lenis.start();
-            }
-            
-            // Return focus to the About button that triggered the modal
-            aboutReadMoreBtn.focus();
-         }
-
-         // Close modal when close button is clicked
-         closeAboutModalBtn.addEventListener('click', closeModal);
-         
-         // Close modal when clicking on overlay background
-         modalOverlay.addEventListener('click', closeModal);
-
-         /**
-          * Keyboard accessibility - Close modal with Escape key
-          * Improves user experience and accessibility
-          */
-         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && aboutModal.classList.contains('active')) {
-               closeModal();
-            }
-         });
-
-         /**
-          * Modal Scroll Handling
-          * Allows scrolling within modal without affecting background scroll
-          * Uses event delegation and passive listeners for performance
-          */
-
-         // Allow mouse wheel scrolling within modal content
-         modalContent.addEventListener('wheel', (e) => {
-            e.stopPropagation();  // Prevent scroll from bubbling to background
-         }, { passive: true });  // passive: true improves scroll performance
-
-         // Allow touch scrolling (mobile) within modal content
-         modalContent.addEventListener('touchmove', (e) => {
-            e.stopPropagation();  // Prevent scroll from bubbling to background
-         }, { passive: true });  // passive: true improves scroll performance
-      </script>
-   </body>
+        <div class="nav__buttons">
+          <i class="ri-moon-fill nav__theme" id="theme-button"></i>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line"></i>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__data">
+            <h1 class="home__title"><span>We are</span> Exact<span> in</span></h1>
+            <h1><span id="typed-element"></span></h1>
+            <p class="home__description">From concept through to completion, we deliver precision, reliabilty, and performance you trust.</p>
+            <a href="#about" class="button">Get started</a>
+          </div>
+          <div class="home__content grid">
+            <div class="home__info">
+              <div>
+                <div class="card__container" data-tilt>
+                  <article class="card__article">
+                    <img src="assets/img/ipad.png" alt="image" class="card__img">
+                    <div class="card__data">
+                      <span class="card__description">Vancouver Mountains, Canada</span>
+                      <h2 class="card__title">The Great Path</h2>
+                      <a href="#" class="card__button">Read More</a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="home__image">
+              <img src="assets/img/home-img.png" alt="image" class="home__img">
+            </div>
+          </div>
+        </div>
+        <div class="intro-section">
+          <p id="intro-text"></p>
+        </div>
+      </section>
+      <section class="sticky" id="sticky">
+        <div class="card-container">
+          <div class="card" id="card-1">
+            <div class="card-front">
+              <img src="./assets/img/image_part_001.jpg" alt="">
+            </div>
+            <div class="card-back">
+              <span>CLIENT FOCUS</span>
+              <p>Our business is about making our clients' businesses better. We have built a responsive business culture that focuses on our client’s needs and provides customised solutions with certainty of delivery.</p>
+            </div>
+          </div>
+          <div class="card" id="card-2">
+            <div class="card-front">
+              <img src="./assets/img/image_part_002.jpg" alt="">
+            </div>
+            <div class="card-back">
+              <span>COLLABORATION</span>
+              <p>Through strategic collaboration, we aim to maximize the potential of our combined capabilities and geographical reach to enhance the delivery of Exact Services and provide exceptional solutions</p>
+            </div>
+          </div>
+          <div class="card" id="card-3">
+            <div class="card-front">
+              <img src="./assets/img/image_part_003.jpg" alt="">
+            </div>
+            <div class="card-back">
+              <span>VALUE DRIVEN</span>
+              <p>At Exact Services Limited, we deliver a consistent, quality engineering services, sharing knowledge across borders and capturing valuable perspective. We strive to challenge the status quo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="intro-explain-section">
+        <div class="intro-explain">
+          <h1 class="reveal-r">We inspire and help our customers</h1>
+          <p class="reveal-l">Our depth of expertise ensures our ability to deliver specialist knowledge and capability to a diverse range of clients while offering exceptional, result and relationship-driven service every time.</p>
+          <a href="#about" class="button">Get started</a>
+        </div>
+      </section>
+      <div class="about-modal" id="aboutModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+          <button class="modal-close" id="closeAboutModal">
+            <i class="ri-close-line"></i>
+          </button>
+          <div class="modal-body">
+            <div class="modal-column">
+              <h2>About<br>Exact Services LTD</h2>
+              <p>EXACT SERVICES (ESL) is a private limited liability company incorporated with Corporate Affairs Commission. ESL is one of the fast upcoming and integrated engineering, procurement, construction, maintenance, and oil and gas services company. We have the capability of executing all engineering service works, covering engineering, procurement, construction, and commissioning to mention few.</p>
+              <p>We have participated in the execution of several engineering projects with major federal government agencies in Nigeria.ESL is focused on quality, cost-effective, innovative and cutting-edge solutions designed to meet the present day challenges of the Oil and Gas industry and other industrial markets in Nigeria.</p>
+              <p>With a well grounded team of experience Engineers and other technical staff involved in oil and gas services, our clients are assured to expect the level of expertise they required.</p>
+            </div>
+            <div class="modal-column">
+              <p>Our experience in the field of engineering maintenance as well as Oil and Gas industry enhance our performance and ability to meet our client expectation on time.</p>
+              <img src="./assets/img/ESL.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section class="about services-section" id="about">
+      <div class="about__container-main">
+        <div class="img-side-main reveal-l">
+          <div class="about__img">
+            <img src="./assets/img/about.png" alt="">
+          </div>
+        </div>
+        <div class="content-side-main">
+          <div class="reveal-r"><span class="badge">About Us</span></div>
+          <h1 class="reveal-l">Industry Expertise That Empowers</h1>
+          <p class="reveal-r">Exact Services is a multidisciplinary engineering company registered in Nigeria <strong>(RC 366085)</strong>. We deliver flexible, innovative, and cost-effective engineering solutions tailored to client needs. Driven by quality, safety, and customer satisfaction, our experienced and well-trained team applies disciplined processes and technical expertise to consistently deliver value and support our clients’ success.</p>
+          <div class="reveal-l"><a href="#" class="btn-main reveal-d" id="about-read-more">Read More</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="about services-section" id="about">
+      <div class="about__container">
+        <div class="content-side">
+          <div class="reveal-d"><span class="badge">Strategic Pillars</span></div>
+          <h1 class="reveal-l">We are Value-Driven & Mission-Led</h1>
+          <p class="reveal-r">At our core, we are a values-driven organization dedicated to bridging the infrastructural gap within the oil and gas industry. By integrating state-of-the-art technological equipment with expert services and support, we empower our clients to achieve sustainable growth and operational excellence.</p>
+          <div class="reveal-l"><a href="#about" class="btn-main">Read More</a></div>
+        </div>
+        <div class="cards-side">
+          <div class="about__card reveal-t">
+            <h1>Our Values</h1>
+            <ul>
+              <li>Excellence</li>
+              <li>Professionalism</li>
+              <li>Innovation</li>
+              <li>Customer focus</li>
+              <li>Integrity & Teamwork</li>
+            </ul>
+          </div>
+          <div class="about__card reveal-r">
+            <h1>Our Vision</h1>
+            <p>To bridge the infrastructure gap in the oil and gas industry by providing state-of-the-art technological equipment, services, and support.</p>
+          </div>
+          <div class="about__card reveal-l">
+            <h1>Our Mission</h1>
+            <p>To provide our clients with innovative and cost-effective solutions, through continuous development of a focused and dedicated workforce.</p>
+          </div>
+          <div class="about__card reveal-d">
+            <h1>Experience Gallery</h1>
+            <ul>
+              <li>100% Indigenous Ownership</li>
+              <li>Proven Industrial Impact</li>
+              <li>Uncompromising Quality</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="expertise expert-section" id="expertise">
+      <div class="expert-badge reveal-r"><span>Our Services</span></div>
+      <div class="wrapper reveal-l">
+        <div class="stage">
+          <div class="stage-frame" id="para__card">
+            <div class="image-overlay" id="overlay">
+              <div class="overlay-content">
+                <span id="overlay-tag">Power / Industrial Engineering</span>
+                <p id="overlay-desc">A hybrid engineering field that combines power systems engineering with industrial engineering principles.</p>
+              </div>
+            </div>
+            <img src="./assets/img/Power__Industrial Engineering.jpg" class="active" id="img1">
+            <img src="./assets/img/Consultancy__Engineering.jpg" id="img2">
+            <img src="./assets/img/Supply__Maintenance.jpg" id="img3">
+            <img src="./assets/img/Construction__Services.jpg" id="img4">
+            <img src="./assets/img/marine__engineering.jpg" id="img5">
+            <img src="./assets/img/Weatherproofing.jpg" id="img6">
+          </div>
+        </div>
+        <div class="content reveal-r">
+          <div class="item active" data-img="img1" data-tag="Power / Industrial Engineering" data-title="Test Title" data-desc="A hybrid engineering field that combines power systems engineering with industrial engineering principles.">
+            <h2><i class="ri-arrow-down-s-line item-arrow"></i>Power / Industrial Engineering</h2>
+            <div class="description-container">
+              <p>Our company, EXACT SERVICES, has the required personnel and capability to carry out maintenance on a regular basis in the following areas as they relate to the National Electric Power Authority (NEPA).</p>
+              <ul>
+                <li>Transformer Maintenance</li>
+                <li>RMU Maintenance</li>
+                <li>Panel Maintenance</li>
+                <li>System Studies</li>
+                <li>Overhead Lines</li>
+              </ul>
+            </div>
+          </div>
+          <div class="item" data-img="img2" data-tag="Our Engineering Consultancy" data-title="Test Title" data-desc="A professional advisory and technical support by our qualified engineers to plan, design, execute, and manage your projects.">
+            <h2><i class="ri-arrow-down-s-line item-arrow"></i>Consultancy in Engineering Services</h2>
+            <div class="description-container">
+              <p>EXACT SERVICES LIMITED is led by chartered specialists across key engineering disciplines, delivering integrated, strategic, and customer-focused project management solutions.</p>
+              <br>
+              <p>Our consultancy capabilities comprise:</p>
+              <ul>
+                <li>Electrical Engineering</li>
+                <li>Information Communication Technology Services</li>
+              </ul>
+              <br>
+              <p>Benefits to our Customers:</p>
+              <ul>
+                <li>Reliable and quality communications</li>
+                <li>Cost effective service</li>
+                <li>Expansion of market reach and revenuegrowth</li>
+                <li>Effectiveness and productivity enhancement</li>
+                <li>Social and economic development</li>
+                <li>Reliable and Quality Services</li>
+              </ul>
+            </div>
+          </div>
+          <div class="item" data-img="img3" data-tag="Engineering Supply & Maintenance" data-title="Test Title" data-desc="We provides the right technical materials, equipment, and systems needed for your engineering operations.">
+            <h2><i class="ri-arrow-down-s-line item-arrow"></i>Supply and Maintenance of Engineering Systems</h2><br>
+            <div class="description-container">
+              <ul>
+                <li>Air-Conditioning system: We supply, install, and maintain various types and brands of air conditioners, dealing in chiller systems, cold rooms, central units, split units, and refrigerators.</li>
+                <li>Generators: We supply, install and maintain generators of various capacities and phases.</li>
+                <li>Supply of Rural Electrification materials such as Transformers, Electric Poles, Feeder pillars, poles Dressing materials, Cables and Line conductors.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="item" data-img="img4" data-tag="Construction Services" data-title="Test Title" data-desc="Get us involved in planning, building, renovating, and maintaining your physical structures.">
+            <h2><i class="ri-arrow-down-s-line item-arrow"></i>Construction Services</h2>
+            <div class="description-container">
+              <ul>
+                <li>Remodeling, reconstruction, and finishing of existing structures.</li>
+                <li>Constructing structures designed by otherfirms.</li>
+                <li>Extensive landscaping and erosion control.</li>
+                <li>Maintenance of existing roads.</li>
+                <li>ESupply of specific construction materials, such as earth equipment, laterite chippings, iron rods, and cement as the client may from time to time require.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="item" data-img="img5" data-tag="Marine Engineering" data-title="Test Title" data-desc="We design, operate, install, and maintain the mechanical and electrical systems on ships and offshore structures.">
+            <h2><i class="ri-arrow-down-s-line item-arrow"></i>Marine Engineering</h2>
+            <div class="description-container">
+              <ul>
+                <li>Supply, installation and maintenance of Inmarsats, radars, echo sounders, Tugboat services, marine water supplies/on and off shores, boilers and vessels, Rehabilitation of dredger jetty</li>
+                <li>Tenders documentation, appraisal and evaluation</li>
+                <li>Project supervision, management and control (Feed-back mechanism)</li>
+                <li>Project site consultancy</li>
+                <li>Site determination (Suitability analysis)</li>
+                <li>Site Preparation</li>
+                <li>Site design.</li>
+                <li>Feasibility studies, project research and development</li>
+                <li>Feasibility studies and report writing</li>
+              </ul>
+            </div>
+          </div>
+          <div class="item" data-img="img6" data-tag="Weather - proofing" data-title="Test Title" data-desc="We protect buildings, structures, equipments, or system from damage caused by weather conditions like rain, wind, heat, sunlight, humidity, dust, and temperature changes.">
+            <h2><i class="ri-arrow-down-s-line item-arrow"></i>Weather - proofing</h2>
+            <div class="description-container">
+              <ul>
+                <li>Waterproofing (felting): Protection of all kinds of roofing materials (concrete or Asbestos) against leakages (Roof management).</li>
+                <li>Rust proofing: Protection of metal tanks, pipes, ships or merchant vessels and all metal related structures against corrosion.</li>
+                <li>Damp proofing: We employ high quality membranes in the construction of structural foundations to prevent rising damp in buildings.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects section" id="projects">
+    </section>
+    <section class="sustainability section" id="sustainability">
+    </section>
+    <section class="blog section" id="blog">
+    </section>
+    <section class="contact section" id="contact">
+    </section>
+    <footer class="footer">
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12.1.0/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scroll-out@2.2.12/dist/scroll-out.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
-
