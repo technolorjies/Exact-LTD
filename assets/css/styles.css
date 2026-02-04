@@ -605,9 +605,9 @@ img { display: block; height: auto; }
 
 /* --- 3D Stage & Depth --- */
 .expert-section {
-  padding: 10rem 2rem 10rem 2rem !important;
-  background-color: #0d0d12;
-  background-attachment: fixed;
+    padding: 10rem 2rem 10rem 2rem !important;
+    background: linear-gradient(180deg, black, #090233);
+    background-attachment: fixed;
 }
 
 .expert-badge {
@@ -669,7 +669,7 @@ img { display: block; height: auto; }
 }
 
 .stage-frame img.active {
-  opacity: 0.55;
+  opacity: 1;
   scale: 1;
 }
 
@@ -677,23 +677,23 @@ img { display: block; height: auto; }
 .image-overlay {
   position: absolute;
   width: 25rem;
-  bottom: -5rem;
+  bottom: -8rem;
   left: 100px;
   right: 100px;
   padding: 1.2rem;
   border-radius: 32px;
   background: var(--glass);
-  backdrop-filter: blur(35px) saturate(200%);
-  -webkit-backdrop-filter: blur(35px) saturate(200%);
+  /* reduced blur to avoid text rasterization and improve sharpness */
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
   border: 1px solid var(--glass-border);
   z-index: 10;
   pointer-events: none;
-  transform: translateZ(180px); /* Pushed even further */
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform: translateY(12px); /* use Y translation instead of Z to avoid bitmap rendering */
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.15s ease-out;
   
-  /* Initial static shadow */
-  box-shadow: 0 0 0 rgba(0,0,0,0);
-  transition: box-shadow 0.1s ease-out, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* Initial subtle shadow */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
 .overlay-content {
@@ -705,6 +705,41 @@ img { display: block; height: auto; }
 .active-overlay .overlay-content {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Improve legibility when overlay is active */
+.image-overlay.active-overlay {
+  background: rgba(0,0,0,0.65); /* slightly darker for contrast */
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.06);
+  transform: translateY(-10px) scale(1.02);
+}
+
+.active-overlay .overlay-content span,
+.active-overlay .overlay-content h3,
+.active-overlay .overlay-content p {
+  color: #01acb9;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.active-overlay .overlay-content h3 {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.active-overlay .overlay-content p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #ffffff;
+    letter-spacing: 0.03rem;
+    /* font-weight: 400; */
+    opacity: 1;
+    transition: opacity 0.25s var(--ease);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
 }
 
 .overlay-content span {
